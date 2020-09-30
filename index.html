@@ -13,9 +13,9 @@
         const urlP = () => {
             // ?name=&phone=
             const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
 
             if(urlParams.has('name') && urlParams.has('phone')) {
-                const urlParams = new URLSearchParams(queryString);
                 const name = urlParams.get('name');
                 const phone = urlParams.get('phone');
                 greating(name,phone);
